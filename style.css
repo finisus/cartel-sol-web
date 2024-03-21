@@ -201,6 +201,49 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 16px;
+  background-color: var(--backgroundTranslucent);
+}
+#tokenomics-container {
+  width: 444px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 2px solid var(--primaryTranslucent);
+  background-color: var(--backgroundTranslucent);
+  letter-spacing: 2px;
+  font-family: 'corleoneDue';
+  font-size: 24px;
+}
+.proofBtn {
+  border: none;
+  background-color: var(--primaryTranslucent);
+  color: var(--text);
+  font-family: 'corleoneDue';
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 20px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+.proofBtn:hover {
+  background-color: var(--secondaryTranslucent);
+}
+.proofBtn:active {
+  background-color: var(--primaryTranslucent);
+}
+#lp {
+  color: var(--primary);
+}
+#lp, #mint, #freeze {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
@@ -287,27 +330,25 @@ footer {
 
 /* mobile optimzations */
 @media screen and (max-width: 801px) {
-  header {
-    font-size: 44px;
-  }
+  header { font-size: 44px; }
+  #main-container { width: 220px; }
 
-  #main-container {
-    width: 220px;
-  }
-  
-  #contract-title {
-    font-size: 20px;
-  }
-  #copy-ca-button {
-    font-size: 20px;
-  }
-  #contract-address {
-    font-size: 12px;
-  }
-  
+  #contract-title { font-size: 20px; }
+  #copy-ca-button { font-size: 20px; }
+  #contract-address { font-size: 12px; }
+
   #chart-button { font-size: 20px; }
   #buy-button { font-size: 20px; }
 
+  #tokenomics-container {
+    width: 220px;
+    letter-spacing: 2px;
+    font-size: 16px;
+  }
+  .proofBtn {
+    letter-spacing: 2px;
+    font-size: 12px;
+  }
 
   footer { width: 284px; }
   #music-widget {
