@@ -211,7 +211,10 @@ footer {
   margin-bottom: 16px;
   display: flex;
   flex-direction: row;
-  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  width: 492px;
+  background-color: var(--backgroundTranslucent);
 }
 
 #music-widget {
@@ -222,21 +225,42 @@ footer {
   text-align: center;
   font-family: 'corleoneDue';
   font-size: 24px;
-  color: var(--text);
-  background-color: var(--accentTranslucent);
+  color: var(--accent);
+  background: none;
   padding: 4px 8px;
   cursor: pointer;
 }
 #music-widget:hover {
-  background-color: var(--accent);
+  color: var(--accentTranslucent);
 }
 #music-widget:active {
-  background-color: var(--accentTranslucent);
+  color: var(--accent);
 }
 #music-icon {
   margin-right: 4px;
   height: 24px;
   width: auto;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'corleoneDue';
+  font-size: 24px;
+  padding: 4px 8px;
+  color: var(--text);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.socials:hover {
+  color: var(--primaryTranslucent);
+}
+.socials:active {
+  color: var(--text);
 }
 
 #switch-card {
@@ -248,17 +272,17 @@ footer {
   width: 104px;
   font-family: 'corleoneDue';
   font-size: 24px;
-  color: var(--text);
-  background-color: var(--secondaryTranslucent);
+  color: var(--primary);
+  background: none;
   padding: 4px 8px;
   border: none;
   cursor: pointer;
 }
 #switch-card:hover {
-  background-color: var(--secondary);
+  color: var(--secondaryTranslucent);
 }
 #switch-card:active {
-  background-color: var(--secondaryTranslucent);
+  color: var(--primary);
 }
 
 /* mobile optimzations */
@@ -284,6 +308,8 @@ footer {
   #chart-button { font-size: 20px; }
   #buy-button { font-size: 20px; }
 
+
+  footer { width: 284px; }
   #music-widget {
     font-size: 20px;
     padding: 4px 8px;
@@ -292,8 +318,9 @@ footer {
     margin-right: 4px;
     height: 20px;
   }
+  .socials { font-size: 20px; }
   #switch-card {
-    width: 96px;
+    width: 92px;
     font-size: 20px;
     padding: 4px 8px;
   }
