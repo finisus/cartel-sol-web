@@ -69,7 +69,10 @@ header {
   margin-top: 16px;
   font-size: 56px;
   letter-spacing: 4px;
-
+  color: var(--text);
+}
+.accent-text {
+  color: var(--text);
 }
 
 /* Main Content */
@@ -138,6 +141,54 @@ header {
   font-size: 20px;
   text-align: center;
   word-break: break-all;
+}
+
+#buy-action {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+#chart-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: 'corleoneDue';
+  font-size: 20px;
+  padding: 4px 8px;
+  color: var(--text);
+  background-color: rgba(34, 44, 44, 0.88);
+  border: 2px solid var(--primaryTranslucent);
+  cursor: pointer;
+}
+#buy-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: 'corleoneDue';
+  font-size: 20px;
+  padding: 4px 8px;
+  color: var(--text);
+  background-color: rgba(34, 44, 44, 0.88);
+  border: 2px solid rgba(115, 139, 140, 0.88);
+  cursor: pointer;
+}
+#buy-button:hover {
+  border: 2px solid rgba(180, 205, 197, 0.88);
+  color: var(--background);
+  background-color: rgba(180, 205, 197, 0.88);
+}
+#buy-button:active {
+  color: var(--text);
+  background-color: rgba(34, 44, 44, 0.88);
 }
 
 /* Secondary Page */
@@ -228,5 +279,22 @@ footer {
   }
   #contract-address {
     font-size: 12px;
+  }
+  
+  #chart-button { font-size: 20px; }
+  #buy-button { font-size: 20px; }
+
+  #music-widget {
+    font-size: 20px;
+    padding: 4px 8px;
+  }
+  #music-icon {
+    margin-right: 4px;
+    height: 20px;
+  }
+  #switch-card {
+    width: 96px;
+    font-size: 20px;
+    padding: 4px 8px;
   }
 }
