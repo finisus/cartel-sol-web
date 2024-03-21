@@ -1,42 +1,35 @@
 // execute program after DOM content loads...
 document.addEventListener("DOMContentLoaded", function() {
-
-  /* music widget logic */
-  const musicWidget = document.getElementById('music-widget');
-  const playButton = document.getElementById('unmute-music');
-  const pauseButton = document.getElementById('mute-music');
-  const audio = document.getElementById('song');
   
-  let isPlaying = true;
+  /* Audio playback */
+  const audio = new Audio('./metadata/the-godfather-theme-song.mp3');
+  audio.loop = true;
+  audio.volume = 0.69;
+  const muteBtn = document.getElementById('mute-music');
+  const unmuteBtn = document.getElementById('unmute-music');
 
-  // function to toggle play/pause
-  function togglePlay() {
-    if (isPlaying) {
-      audio.play();
-      playButton.style.display = 'none';
-      pauseButton.style.display = 'block';
-    } else {
-      audio.pause();
-      playButton.style.display = 'block';
-      pauseButton.style.display = 'none';
-    }
-    isPlaying = !isPlaying;
-  }
-  
-  // toggle play/pause when music widget is clicked
-  musicWidget.addEventListener('click', togglePlay);
-  
-  // handle when song ends
-  audio.onended = function() {
-    playButton.style.display = 'block';
-    pauseButton.style.display = 'none';
-    isPlaying = false;
-  };
+  // show mute button by default
+  muteBtn.style.display = 'block';
+  unmuteBtn.style.display = 'none';
 
-  // start music on page load
-  musicWidget.click();
+  // mute audio
+  muteBtn.addEventListener('click', function() {
+    audio.muted = true;
+    muteBtn.style.display = 'none';
+    unmuteBtn.style.display = 'block';
+  });
 
-  /* card-switch b/w main-tokenomics */
+  //unmute audio
+  unmuteBtn.addEventListener('click', function() {
+    audio.muted = false;
+    muteBtn.style.display = 'block';
+    unmuteBtn.style.display = 'none';
+  });
+
+  // play audio on page load
+  audio.play();
+
+  /* Card-switch b/w main-tokenomics */
   const mainCard = document.getElementById('main');
   const tokenomics = document.getElementById('tokenomics');
   const switchCard = document.getElementById('switch-card');
