@@ -11,8 +11,9 @@
 /* Global Settings */
 :root {
   --background: rgba(28, 27, 23, 1.0);
-  --text: rgba(206, 203, 200, 1.0);
-  --primary: rgba(235, 174, 94, 1.0);
+  --backgroundTranslucent: rgba(28, 27, 23, 0.69);
+  --text: rgba(255, 255, 255, 0.88);
+  --primary: rgba(235, 174, 94, 0.88);
   --primaryTranslucent: rgba(235, 174, 94, 0.69);
   --secondary: rgba(133,76,21, 1.0);
   --secondaryTranslucent: rgba(133,76,21, 0.8);
@@ -24,6 +25,17 @@
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+}
+
+.background-blur {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.backdrop-shadow {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.0),
+                    0 22px 70px 4px rgba(0,0,0,0.55),
+                    0 0 0 1px rgba(0, 0, 0, 0.0);
 }
 
 /* let page take full height of viewport excess */
@@ -68,6 +80,60 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 16px;
+  background-color: var(--backgroundTranslucent);
+}
+#main-container {
+  width: 444px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  border: 2px solid var(--primaryTranslucent);
+  background-color: var(--backgroundTranslucent);
+}
+
+#contract-action {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 8px;
+}
+#contract-title {
+  font-family: 'corleoneDue';
+  font-size: 24px;
+  color: var(--primary);
+  cursor: none;
+}
+#copy-ca-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'corleoneDue';
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  color: var(--primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+#copy-ca-button:hover {
+  color: var(--primaryTranslucent);
+}
+#copy-ca-button:active {
+  color: var(--primary);
+}
+#contract-address {
+  font-family: 'corleoneDue';
+  letter-spacing: 2px;
+  font-size: 20px;
+  text-align: center;
+  word-break: break-all;
 }
 
 /* Secondary Page */
@@ -109,6 +175,9 @@ footer {
 #music-widget:hover {
   background-color: var(--accent);
 }
+#music-widget:active {
+  background-color: var(--accentTranslucent);
+}
 #music-icon {
   margin-right: 4px;
   height: 24px;
@@ -121,6 +190,7 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 104px;
   font-family: 'corleoneDue';
   font-size: 24px;
   color: var(--text);
@@ -132,10 +202,27 @@ footer {
 #switch-card:hover {
   background-color: var(--secondary);
 }
+#switch-card:active {
+  background-color: var(--secondaryTranslucent);
+}
 
 /* mobile optimzations */
 @media screen and (max-width: 801px) {
   header {
     font-size: 36px;
+  }
+
+  #main-container {
+    width: 220px;
+  }
+  
+  #contract-title {
+    font-size: 20px;
+  }
+  #copy-ca-button {
+    font-size: 20px;
+  }
+  #contract-address {
+    font-size: 12px;
   }
 }
