@@ -5,21 +5,12 @@ document.addEventListener("DOMContentLoaded", function() {
   const audio = new Audio('./metadata/the-godfather-theme-song.mp3');
   audio.loop = true;
   audio.volume = 0.69;
-  const playBtn = document.getElementById('play-music');
   const muteBtn = document.getElementById('mute-music');
   const unmuteBtn = document.getElementById('unmute-music');
 
-  // show play button by default
-  playBtn.style.display = 'block';
-  muteBtn.style.display = 'none';
+  // show mute button by default
+  muteBtn.style.display = 'block';
   unmuteBtn.style.display = 'none';
-
-  // Play audio on play button click
-  playBtn.addEventListener('click', function() {
-    audio.play();
-    playBtn.style.display = 'none';
-    muteBtn.style.display = 'block';
-  });
 
   // mute audio
   muteBtn.addEventListener('click', function() {
@@ -35,6 +26,29 @@ document.addEventListener("DOMContentLoaded", function() {
     unmuteBtn.style.display = 'none';
   });
 
+  // ensure audio playback on user interaction
+  document.addEventListener('click', function() {
+    audio.play().catch(error => {
+      console.log("Autoplay was prevented. Please interact with the page to play audio.");
+    });
+  });
+
+  // ensure audio playback on user interaction (click or touch)
+  const interactionEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+  document.addEventListener(interactionEvent, function() {
+    audio.play().catch(error => {
+      console.log("Autoplay was prevented. Please interact with the page to play audio.");
+    });
+  });
+
+  /* landing page */
+  const landingPage = document.getElementById('landing-page');
+  const closeLandingBtn = document.getElementById('close-landing-button');
+  landingPage.style.display = 'flex';
+  closeLandingBtn.addEventListener('click', function() {
+    landingPage.style.display = 'none';
+  });
+
   /* Card-switch b/w main-tokenomics */
   const mainCard = document.getElementById('main');
   const tokenomics = document.getElementById('tokenomics');
@@ -48,3 +62,10 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 });
+
+
+/*
+Add a landing page 
+  -landing page needs button to click to enter so that takes care of autoplay music
+  -landing page should have a dark background elusive pepe that is shhh
+*/
