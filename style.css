@@ -72,7 +72,7 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
-  background-color: var(--backgroundTranslucent);
+  background-color: var(--background);
 }
 
 #cartel-def-container {
@@ -140,9 +140,10 @@ main {
   border: 2px solid var(--primaryTranslucent);
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -150,8 +151,8 @@ main {
 header {
   position: absolute;
   top: 0;
-  margin-top: 16px;
-  font-size: 56px;
+  margin-top: 32px;
+  font-size: 72px;
   letter-spacing: 4px;
   color: var(--text);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.0),
@@ -161,15 +162,13 @@ header {
 
 /* Main Content */
 #main {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: -48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 16px;
+  padding-bottom: 0;
   background-color: var(--backgroundTranslucent);
 }
 #main-container {
@@ -277,10 +276,6 @@ header {
 
 /* Secondary Page */
 #tokenomics {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -330,18 +325,22 @@ header {
   align-items: center;
 }
 
-
 /* Footer */
+#footer-container {
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  padding: 16px;
+  background-color: var(--backgroundTranslucent);
+}
 footer {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 16px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 492px;
-  background-color: var(--backgroundTranslucent);
+  width: 476px;
+  border: 2px solid var(--primaryTranslucent);
 }
 
 #music-widget {
@@ -396,7 +395,7 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 104px;
+  width: auto;
   font-family: 'corleoneDue';
   font-size: 24px;
   color: var(--primary);
@@ -410,6 +409,28 @@ footer {
 }
 #switch-card:active {
   color: var(--primary);
+}
+
+/* Backdrop */
+#lineup-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden; 
+}
+#lineup-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; 
+  opacity: 0.55;
+  padding: 0;
+  margin: 0;
 }
 
 /* mobile optimzations */
@@ -436,7 +457,8 @@ footer {
 
   #pepe-gif { width: 324px; }
 
-  header { font-size: 44px; }
+  header { font-size: 52px; }
+  #main { margin-top: 0; }
   #main-container { width: 220px; }
 
   #contract-title { font-size: 20px; }
@@ -456,19 +478,19 @@ footer {
     font-size: 12px;
   }
 
-  footer { width: 284px; }
+  footer { width: 252px; }
   #music-widget {
-    font-size: 20px;
+    font-size: 17px;
     padding: 4px 8px;
   }
   #music-icon {
     margin-right: 4px;
-    height: 20px;
+    height: 17px;
   }
-  .socials { font-size: 20px; }
+  .socials { font-size: 17px; }
   #switch-card {
-    width: 92px;
-    font-size: 20px;
+    width: auto;
+    font-size: 17px;
     padding: 4px 8px;
   }
 }
