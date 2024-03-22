@@ -135,8 +135,8 @@ body {
   border: 2px solid var(--primaryTranslucent);
   cursor: pointer;
 }
-#close-landing-button:hover { color: var(--background); background-color: var(--primaryTranslucent); }
-#close-landing-button:active { background-color: var(--backgroundTranslucent);}
+#close-landing-button:hover { color: var(--background); background-color: var(--primaryTranslucent); outline: none; }
+#close-landing-button:active { background-color: var(--backgroundTranslucent); }
 
 main {
   border: 2px solid var(--primaryTranslucent);
@@ -213,6 +213,7 @@ header {
 }
 #copy-ca-button:hover {
   color: var(--primaryTranslucent);
+  outline: none;
 }
 #copy-ca-button:active {
   color: var(--primary);
@@ -267,6 +268,7 @@ header {
   border: 2px solid rgba(180, 205, 197, 0.88);
   color: var(--background);
   background-color: rgba(180, 205, 197, 0.88);
+  outline: none;
 }
 #buy-button:active {
   color: var(--text);
@@ -309,6 +311,7 @@ header {
 }
 .proofBtn:hover {
   background-color: var(--secondaryTranslucent);
+  outline: none;
 }
 .proofBtn:active {
   background-color: var(--primaryTranslucent);
@@ -357,6 +360,7 @@ footer {
 }
 #music-widget:hover {
   color: var(--accentTranslucent);
+  outline: none;
 }
 #music-widget:active {
   color: var(--accent);
@@ -406,6 +410,7 @@ footer {
 }
 #switch-card:hover {
   color: var(--secondaryTranslucent);
+  outline: none;
 }
 #switch-card:active {
   color: var(--primary);
@@ -428,7 +433,7 @@ footer {
   width: 100%;
   height: auto;
   object-fit: cover; 
-  opacity: 0.55;
+  opacity: 0.69;
   padding: 0;
   margin: 0;
 }
