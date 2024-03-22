@@ -417,6 +417,9 @@ footer {
 }
 
 /* Backdrop */
+
+
+
 #lineup-container {
   position: absolute;
   bottom: 0;
@@ -485,17 +488,28 @@ footer {
 
   footer { width: 252px; }
   #music-widget {
-    font-size: 17px;
+    font-size: 16px;
     padding: 4px 8px;
   }
   #music-icon {
     margin-right: 4px;
-    height: 17px;
+    height: 16px;
   }
-  .socials { font-size: 17px; }
+  .socials { font-size: 16px; }
   #switch-card {
     width: auto;
-    font-size: 17px;
+    font-size: 16px;
     padding: 4px 8px;
+  }
+
+  @keyframes move {
+    0%  { transform: translate(-50%, 0) rotate(15deg); }
+    50% { transform: translate(-50%, 0) rotate(-15deg); }
+    100% { transform: translate(-50%, 0) rotate(15deg); }
+  }
+  @-webkit-keyframes move {
+    0%  { transform: translate(-50%, 0) rotate(15deg); }
+    50% { transform: translate(-50%, 0) rotate(-15deg); }
+    100% { transform: translate(-50%, 0) rotate(15deg); }
   }
 }
