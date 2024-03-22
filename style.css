@@ -381,11 +381,9 @@ footer {
   border: none;
   cursor: pointer;
 }
-.socials:focus {
-  outline: none;
-}
 .socials:hover {
   color: var(--primaryTranslucent);
+  outline: none;
 }
 .socials:active {
   color: var(--text);
