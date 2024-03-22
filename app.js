@@ -46,9 +46,9 @@ document.addEventListener("DOMContentLoaded", function() {
   const closeLandingBtn = document.getElementById('close-landing-button');
   
   
-  /* UNCOMMENT TO SHOW */
-  /* landingPage.style.display = 'flex'; */
-  landingPage.style.display = 'none';
+  /* COMMENT TO UNSHOW */
+  landingPage.style.display = 'flex';
+  /* landingPage.style.display = 'none'; */
 
   closeLandingBtn.addEventListener('click', function() {
     landingPage.style.display = 'none';
