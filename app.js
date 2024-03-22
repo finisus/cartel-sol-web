@@ -68,4 +68,9 @@ document.addEventListener("DOMContentLoaded", function() {
 Add a landing page 
   -landing page needs button to click to enter so that takes care of autoplay music
   -landing page should have a dark background elusive pepe that is shhh
+
+for main page-
+  -have two floating pictures 
+  -one coming from left to right at the top
+  -the other coming from right to left at the bottom
 */
