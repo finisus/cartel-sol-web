@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const telegramBtn = document.getElementById('telegram-button');
   telegramBtn.addEventListener('click', function() {
-    window.open('https://t.me/', '_blank');
+    window.open('https://t.me/TheSolanaCartel', '_blank');
   });
 
   const chartBtn = document.getElementById('chart-button');
