@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const chartBtn = document.getElementById('chart-button');
   chartBtn.addEventListener('click', function() {
-    window.open('https://dexscreener.com/solana/', '_blank');
+    window.open('https://dexscreener.com/solana/6croto1klv9bjz1jzytlcsx59st7864zxbtx6tejhhsz', '_blank');
   });
 
   const buyBtn = document.getElementById('buy-button');
