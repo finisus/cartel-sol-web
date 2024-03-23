@@ -87,6 +87,21 @@ document.addEventListener("DOMContentLoaded", function() {
     window.open('https://raydium.io/swap/?inputCurrency=sol&outputCurrency=2jhw29eRUiz5jp1GfM71Rz2XzNxF14RZk4ZUZae8Gdsv', '_blank');
   });
 
+  const lp = document.getElementById('lp-button');
+  lp.addEventListener('click', function() {
+    window.open('https://solscan.io/tx/5xRxFdrMiHkcJsD97BmrVDerGh4A2jYMPhVHQiGNZNmKt2R7h2m4kCVtdp2vCbFzNz2PkVtjtKSqZNTYFKfNf9Qj', '_blank');
+  });
+  
+  const mint = document.getElementById('mint-button');
+  mint.addEventListener('click', function() {
+    window.open('https://solscan.io/tx/23DJqgbbT2oEUecWx3yfjYp6FEXX924c8swKLpmr6CNBNcthypk2MiDgnUqD78R4Ln8kb13EvNAHmtP3nj5WWRpk', '_blank');
+  });
+
+  const freeze = document.getElementById('freeze-button');
+  freeze.addEventListener('click', function() {
+    window.open('https://solscan.io/tx/23DJqgbbT2oEUecWx3yfjYp6FEXX924c8swKLpmr6CNBNcthypk2MiDgnUqD78R4Ln8kb13EvNAHmtP3nj5WWRpk', '_blank');
+  });
+
   /* Copy button logic */
   const copyButton = document.getElementById('copy-ca-button');
   const textToCopy = "2jhw29eRUiz5jp1GfM71Rz2XzNxF14RZk4ZUZae8Gdsv";
